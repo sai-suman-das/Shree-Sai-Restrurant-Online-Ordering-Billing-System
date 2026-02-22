@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shree Sai Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+    <h1>🍽️ Shree Sai Restaurant</h1>
+
+    <!-- Table selection -->
+    <div class="table-box">
+        You are sitting at:
+        <select id="tableNo">
+            <option>Table 1</option>
+            <option>Table 2</option>
+            <option>Table 3</option>
+            <option>Table 4</option>
+            <option>Table 5</option>
+            <option>Table 6</option>
+            <option>Table 7</option>
+            <option>Table 8</option>
+        </select>
+    </div>
+</div>
+
+<!-- ===== VEG / NON-VEG TOGGLE ===== -->
+<div class="food-toggle">
+    <button id="vegBtn" class="active" onclick="switchFood('veg')">🥦 Veg</button>
+    <button id="nonVegBtn" onclick="switchFood('nonveg')">🍗 Non-Veg</button>
+</div>
+
+<!-- ===== MAIN LAYOUT ===== -->
+<div class="layout">
+
+    <!-- ===== MENU ===== -->
+    <div class="menu">
+
+        <!-- ===== STARTERS ===== -->
+        <h2>Starters</h2>
+        <div class="grid" id="starters"></div>
+
+        <!-- ===== MAIN COURSE ===== -->
+        <h2>Main Course</h2>
+        <div class="grid" id="mainCourse"></div>
+
+        <!-- ===== ROTI / PARATHA ===== -->
+        <h2>Roti / Paratha</h2>
+        <div class="grid" id="roti"></div>
+
+        <!-- ===== SOFT DRINKS ===== -->
+        <h2>Soft Drinks</h2>
+        <div class="grid" id="drinks"></div>
+
+    </div>
+
+    <!-- ===== BILL ===== -->
+    <div class="bill">
+        <h3>Your Bill</h3>
+        <div id="billItems"></div>
+        <div class="total">Total: ₹<span id="total">0</span></div>
+        <button class="order-btn" onclick="placeOrder()">Place Order</button>
+
+
+        <p class="note">
+            Good food needs plenty of time to become better.  
+            Thank you for your patience.  
+            <br><br>
+            ⚠️ Order cancellation is not allowed after 5 minutes of ordering,
+            as we start preparation immediately to reduce your waiting time.
+        </p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
