@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #bce7c2;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    background: rgb(140, 218, 158);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.table-box select {
+    padding: 6px;
+}
+
+/* ===== VEG / NONVEG ===== */
+.food-toggle {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.food-toggle button {
+    padding: 10px 30px;
+    border: none;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #ddd;
+    transition: all 0.3s ease;
+}
+
+.food-toggle .active {
+    background: #2a9d8f;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+    display: flex;
+}
+
+/* ===== MENU ===== */
+.menu {
+    width: 70%;
+    padding: 20px 30px;
+}
+
+.menu h2 {
+    margin-top: 40px;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* ===== FOOD CARD ===== */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.card .info {
+    padding: 10px;
+}
+
+.card button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #ff7a18;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ===== POLISHED BILL UI ===== */
+.bill {
+    width: 30%;
+    background: white;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+
+    /* 👇 ADD THESE */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    
+}
+
+.bill {
+    box-shadow: -2px 0 10px rgba(0,0,0,0.08);
+}
+
+
+.bill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.bill-left {
+    display: flex;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.bill-item-name {
+    font-weight: 500;
+}
+
+.bill-qty {
+    color: #777;
+}
+
+.bill-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bill-price {
+    font-weight: 600;
+}
+
+.minus-btn {
+    background: #ffe5e5;
+    border: none;
+    color: #d62828;
+    font-size: 16px;
+    padding: 2px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.minus-btn:hover {
+    background: #ffcccc;
+}
+/* ===== PLACE ORDER BUTTON ===== */
+.order-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    background: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.order-btn:hover {
+    background: #21867a;
+}
